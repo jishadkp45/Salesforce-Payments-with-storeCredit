@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-header clearfix">
+        <h1><isprint value="${Resource.msg('label.storecredit.details','storeCredit',null)}"/></h1>
+    </div>
+     <div class="card-header clearfix">
+        <h5><isprint value="${Resource.msg('label.storecredit.balance','storeCredit',null)}"/></h5>
+        <p><isprint value="${pdict.storeCredit.storeCreditBalance}"/></p>
+    </div>
+</div>

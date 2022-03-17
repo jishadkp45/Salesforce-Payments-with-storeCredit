@@ -1,0 +1,6 @@
+<isdecorate template="common/layout/page">
+    <div class="container">
+        <isinclude template="account/storecredit/components/storeCreditBalance" />
+        <isinclude template="account/storecredit/components/storeCreditHistory" />
+    </div>
+</isdecorate>

@@ -1,0 +1,10 @@
+<!--- storecredit payment --->
+<div class="row leading-lines shipping-item">
+    <div class="col-6 start-lines">
+        <p class="order-receipt-label"><span><input type="checkbox" name="" value="" class="store-credit-payment"/>${'USE STORE CREDIT'}</span></p>
+        <input type="hidden" name="" class="url" value="${URLUtils.https('StoreCreditPayment-Begin')}"/>
+    </div>
+    <div class="col-6 end-lines">
+        <p class="text-right"><span class="shipping-total-cost">${pdict.customer.storeCreditBalance}</span></p>
+    </div>
+</div>

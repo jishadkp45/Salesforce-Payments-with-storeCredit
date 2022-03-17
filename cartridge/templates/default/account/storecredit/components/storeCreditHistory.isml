@@ -1,0 +1,54 @@
+<div class="card">
+  <div class="card-header clearfix">
+    <h2>
+       <isprint value="${Resource.msg('label.storecredit.history','storeCredit',null)} " />
+    </h2>
+  </div>
+
+  <div class=" card-header clearfix">
+    <isif condition="${pdict.storeCredit.storeCreditHistory.length > 0}">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">
+                <isprint value="${Resource.msg('label.storecredit.history.slno','storeCredit',null)}" />
+              </th>
+              <th scope="col">
+                <isprint value="${Resource.msg('label.storecredit.history.date','storeCredit',null)}" />
+              </th>
+              <th scope="col">
+                <isprint value="${Resource.msg('label.storecredit.history.amount','storeCredit',null)}" />
+              </th>
+              <th scope="col">
+                <isprint value="${Resource.msg('label.storecredit.history.note','storeCredit',null)}" />
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+              <isloop items="${pdict.storeCredit.storeCreditHistory}" var="storeCreditHistory" status="i">
+              <tr>
+
+                <td>
+                  <isprint value="${i.count}" />
+                </td>
+                <td>
+                  <isprint value="${storeCreditHistory.date}" />
+                </td>
+                <td>
+                  <isprint value="${storeCreditHistory.amount}" />
+                </td>
+                <td>
+                  <isprint value="${storeCreditHistory.note}" />
+                </td>
+
+              </tr>
+            </isloop>
+          </tbody>
+        </table>
+        <iselse/>
+            <h5 class="clearfix">
+                <isprint value="${Resource.msg('label.zeroHistory', 'storeCredit', null)}" />
+            </h5>
+        </isif>
+  </div>
+</div>

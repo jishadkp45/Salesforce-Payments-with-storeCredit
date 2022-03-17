@@ -1,0 +1,21 @@
+<div class="tab-pane active store-credit-content" id="store-credit-content" role="tabpanel">
+    <fieldset class="payment-form-fields">
+
+        <input type="hidden" class="form-control" name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+            value="STORE_CREDIT">
+
+        <isif condition="${pdict.customer.registeredUser}">
+            <div
+                class="user-payment-instruments ${pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length ? '' : 'checkout-hidden'} d-inline">
+                <div class="row leading-lines mt-3">
+                    <div class="col-8 start-lines">
+                    <input type="checkbox" class="store-credit-payment " data-method-id="${paymentOption.ID}" /><span>${'USE STORE CREDIT'}</span>
+                </div>
+                <div class="col-4 end-lines">
+                    ${pdict.customer.storeCreditBalance}${' Balance'}
+                </div>
+                </div>
+            </div>
+        </isif>
+    </fieldset>
+</div>

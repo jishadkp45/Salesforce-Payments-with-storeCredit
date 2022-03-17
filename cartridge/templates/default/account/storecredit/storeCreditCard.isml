@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-header clearfix">
+        <h2><isprint value="${Resource.msg('label.storecredit.heading','storeCredit',null)}  "/></h2>
+    </div>
+     <div class="card-header clearfix">
+        <h5><isprint value="${Resource.msg('label.storecredit.balance','storeCredit',null)}"/></h5>
+        <p><isprint value="${pdict.account.storeCreditBalance}"/></p>
+    </div>
+    <div class="card-header clearfix">
+        <center><a href="${URLUtils.url('StoreCredit-Show')}"><isprint value="${Resource.msg('label.storecredit.link','storeCredit',null)}"/></a></center>
+    </div>
+</div>
